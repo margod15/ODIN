@@ -1,0 +1,6 @@
+dag_name: daily_python_test
+tasks: 
+  - task_id: daily_python_test
+    file: daily_python_test.py
+    type: python
+    dependencies: []

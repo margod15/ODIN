@@ -1,0 +1,7 @@
+dataset: <dataset_name>
+name: table_a
+type: table
+schema:
+  - name: YYMMDD
+  - name: REGIONID
+  - name: AREAID

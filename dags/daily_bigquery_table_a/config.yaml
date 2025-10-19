@@ -1,0 +1,18 @@
+dag_name: daily_bigquery_table_a
+sensors:
+  - task_id: table_a_file_sensor
+    bucket: bucket_a
+    object: table_a/table_a_ddmmyy
+    target_table: <project>.<dataset>.<table_name>
+    file_type: PARQUET
+    load_method: WRITE_TRUNCATE
+    timeout: 3600
+    check_interval: 60
+tasks:
+  - task_id: table_a
+    file: table_a.sql
+    dataset_name: <dataset>
+    target_table: <table_name>
+    load_method: WRITE_TRUNCATE
+    type: bigquery
+    dependencies: [table_a_file_sensor]

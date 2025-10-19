@@ -1,0 +1,4 @@
+name: column_b
+data_type: STRING
+description:
+  - default: 'testing column'
